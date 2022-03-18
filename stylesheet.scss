@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexDirection($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+html {
+    font-size: 10px;
+    width: 100%;
+    IMG {
+        width: 100%;
+        height: auto;
+    }
+}
+:root {
+    --fontJetBrains: 'JetBrains Mono', monospace;
+    --fontSizeTitle: 3rem;
+    --fontSizeSubtitle: 2.5rem;
+    --fontSizeText: 1.5rem;
+    --textColor: hsl(0, 0%, 40%);
+    --brightColor: hsl(0, 0%, 95%);
+    --darkColor: hsl(0, 0%, 10%);
+    --extraContentBG: rgba(120, 120, 120, 30%);
+    --borderRadius: 3rem;
+    --contentPadding: 1.5rem 2rem;
+    --marginBottom: 3rem;
+}
+body {
+    width: 100%;
+    font-family: var(--fontJetBrains);
+    @include flexDirection(column, flex-start, center);
+    font-size: var(--fontSizeText);
+    background-image: url(assets/img/fondomadera1.jpg);
+    background-size: contain;
+}
+#cuerpo {
+    background-color: var(--brightColor);
+    width: clamp(250px, 900px, 90%);
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    #hero {
+        @include flexDirection(column, flex-start, center);
+        color: var(--darkColor);
+        border-radius: var(--borderRadius);
+        text-align: center;
+        padding: var(--contentPadding);
+
+        #title {
+            font-size: var(--fontSizeTitle);
+        }
+        #subtitle {
+            color: var(--textColor);
+            font-size: var(--fontSizeSubtitle);
+        }
+    }
+    #tribute-info {
+        background-color: gba(120, 120, 120, 30%);
+        border-radius: var(--borderRadius);
+        @include flexDirection(column, flex-start, center);
+        padding: var(--contentPadding);
+        #img-div {
+            font-size: 10px;
+            margin-bottom: var(--marginBottom);
+        }
+        #textoinfo {
+            color: var(--textColor);
+            #titulohistoria {
+                color: var(--darkColor);
+                font-size: 2rem;
+                margin-bottom: var(--marginBottom);
+            }
+        }
+    }
+
+    #cita {
+        color: var(--darkColor);
+        background-color: var(--extraContentBG);
+        border-radius: var(--borderRadius);
+        padding: var(--contentPadding);
+        margin: 1.5rem 1rem 0;
+    }
+    #pie {
+        #enlace {
+            background-color: var(--darkColor);
+            border-radius: var(--borderRadius);
+            color: var(--brightColor);
+            padding: var(--contentPadding);
+            margin: 1.5rem 1rem 1.5rem;
+            text-align: center;
+            #tribute-link {
+                color: yellow;
+            }
+            #tribute-link:hover {
+                color: rgb(201, 155, 3);
+            }
+        }
+    }
+}
