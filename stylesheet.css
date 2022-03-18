@@ -46,7 +46,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: var(--fontSizeText);
-  background-image: url(assets/img/fondomadera1.jpg);
+  background-image: url(./assets/img/fondomadera1.jpg);
   background-size: contain;
 }
 

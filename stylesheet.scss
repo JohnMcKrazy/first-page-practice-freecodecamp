@@ -40,7 +40,7 @@ body {
     font-family: var(--fontJetBrains);
     @include flexDirection(column, flex-start, center);
     font-size: var(--fontSizeText);
-    background-image: url(assets/img/fondomadera1.jpg);
+    background-image: url(./assets/img/fondomadera1.jpg);
     background-size: contain;
 }
 #cuerpo {
